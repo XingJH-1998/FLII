@@ -3,9 +3,9 @@ library(data.table)
 library(tidyr)
 
 data <- read.table("/Users/tangerine/Downloads/GMTED_list-of-links-to-files.tab", 
-                   header = TRUE,    # 第一行为列名
-                   sep = "\t",       # 指定制表符分隔
-                   stringsAsFactors = FALSE)  # 字符列不转为因子
+                   header = TRUE,    
+                   sep = "\t",       
+                   stringsAsFactors = FALSE)  
 
 data2 <- data %>%
   separate(`File.name`, into = c("Source", "Type", "Rest"), sep = "\\|") %>%
